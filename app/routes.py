@@ -10,3 +10,8 @@ def cover():
 @app.route('/content')
 def content():
 	return render_template('content.html')
+
+
+@app.route('/content/mexico')
+def mexico():
+	return render_template('content/mexico.html')

@@ -27,11 +27,11 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
   </head>
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
+  <header class="masthead">
     <div class="inner">
       <h3 class="masthead-brand">KS</h3>
       <nav class="nav nav-masthead justify-content-center">
@@ -40,27 +40,33 @@
       </nav>
     </div>
   </header>
+      <div class="row">
+        <p>
+          Whenever I have a question that needs to be answered or a problem that needs to be solved, the first thing I do
+          is look it up online. The purpose of this content is to uniquely contribute to that collective intelligence.
+        </p>
+      </div>
 
   <div class="row mb-2">
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-muted">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
+          <strong class="d-inline-block mb-2 text-primary">Travel</strong>
+          <h3 class="mb-0">Tips for a Trip to Mexico City</h3>
+          <div class="mb-1 text-muted">4 July 2019</div>
+          <p class="card-text mb-auto">Planning a trip to Mexico City? Here are some tips.</p>
+          <a href="{{ url_for('mexico') }}" class="stretched-link">Continue reading</a>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
+          <strong class="d-inline-block mb-2 text-warning">Python</strong>
+          <h3 class="mb-0">The Data Science Stack</h3>
+          <div class="mb-1 text-muted">1 August 2019</div>
+          <p class="mb-auto">Struggling to see a project through from start to finish? Here is how I go from idea to product.</p>
+          <a href="#">Coming soon.</a>
         </div>
       </div>
     </div>
