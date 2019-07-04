@@ -3,3 +3,4 @@ venv/*
 private.md
 .idea/*
 __pycache__
+deployment/*
