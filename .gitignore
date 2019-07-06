@@ -4,3 +4,4 @@ private.md
 .idea/*
 __pycache__
 deployment/*
+ssh.sh
