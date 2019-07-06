@@ -1,8 +1,61 @@
 {% extends "content/base.html" %}
 
 {% block content %}
+<p class="text-right">6 July 2019</p>
 <h1>The Data Science Stack</h1>
-<p class="text-left">
-    Content here.
+<p>
+    <i>Developing an algorithm is only half of the job.</i>
 </p>
+<div class="text-left">
+<p>
+    Let’s say you are approached with a classification problem.
+    You clean the data, preprocess it and develop an algorithm that performs the classification to some satisfactory level of performance.
+    That’s a great result! But only half of the journey.
+    Your algorithm is only as good as the business process that incorporates its implementation <a href="https://www.amazon.com/Human-Machine-Reimagining-Work-Age/dp/1633693864/ref=sr_1_1?crid=2WQ1SW4IRL7WG&keywords=human+and+machine&qid=1562425956&s=gateway&sprefix=human+and+ma%2Caps%2C130&sr=8-1">[1]</a>.
+    Therefore, it is imperative your algorithm runs in <i>real-time</i> - your algorithm needs to live on a server where it can respond to requests.
+    This is how a data science problem becomes a data science stack.
+</p>
+
+<h3>The Data Science Stack</h3>
+<ul>
+    <li>Algorithm development</li>
+    <li>Production implementation</li>
+</ul>
+<p>
+    Of course, there are a number of ways to implement this stack.
+    There are a number of languages you can use and a number of frameworks you can choose from
+    (<a href="https://linkedin.com/in/keironstoddart">and I’d love to hear about yours!</a>).
+    But as with any project, the more efficient you can be the better.
+    For me this means keeping my stack entirely in Python.
+    I use <a href="https://jupyter.org/">Jupyter Notebooks</a> for algorithm development and
+    <a href="http://flask.pocoo.org/">Flask</a> for production implementation.
+</p>
+
+<h3>Algorithm Development in Jupyter Notebooks</h3>
+<p>
+    In the developers’ own words, the Jupyter Notebook is an open-source web application that allows you to create
+    and share documents that contain live code, equations, visualizations and narrative text.
+    In this vein, I like to think of a Jupyter Notebook as a living, breathing <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>.
+    With Jupyter Notebooks I can not only write and execute my Python code but I can annotate it with <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>
+    and collaborate with my peers. This allows me to keep code easily organized as work is done to solve a
+    problem using a number of different algorithms and techniques.
+</p>
+
+<h3>Production Implementation with Flask</h3>
+<p>
+    Flask is a micro web framework written in Python.
+    Because it is a microframework, it is lightweight, flexible and allows you to perform a number of different tasks
+    with any overhead (like serve this website!). An implementation of your algorithm in Flask is what allows your
+    algorithm to come to life (for example, through the development of a <a href="https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">RESTful API</a>). And because it is written in
+    Python, you only have to translate your Jupyter Notebook code, not rewrite it completely.
+</p>
+
+<h3>In Summary</h3>
+<p>
+    Solving a data science problem is more than developing an algorithm, it is about bringing an algorithm to
+    life as part of a production level business process. This process from development to production is
+    what I call the data science stack. Because I code in Python, my stack consists of development in
+    Jupyter Notebooks and implementation in Flask.
+</p>
+</div>
 {% endblock %}
