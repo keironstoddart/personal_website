@@ -1,2 +1,2 @@
-static/bootstrap/* linguist-vendored
-static/jquery/* linguist-vendored
+app/static/bootstrap/* linguist-vendored
+app/static/jquery/* linguist-vendored
