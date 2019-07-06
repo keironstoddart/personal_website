@@ -1,71 +1,25 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Keiron Stoddart</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+{% extends "base.html" %}
+{% set active_page = "content" %}
 
-    <!-- Bootstrap core CSS -->
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
-  </head>
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead">
-    <div class="inner">
-      <h3 class="masthead-brand">KS</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="{{ url_for('cover') }}">About</a>
-        <a class="nav-link active" href="{{ url_for('content') }}">Content</a>
-      </nav>
-    </div>
-  </header>
-      <div class="row mb-2">
-        <p>
-          Whenever I have a question that needs to be answered or a problem that needs to be solved, the first thing I do
-          is look it up online. The purpose of this content is to uniquely contribute to that collective intelligence.
-        </p>
-      </div>
-
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-warning">Python</strong>
-          <h3 class="mb-0">The Data Science Stack</h3>
-          <div class="mb-1 text-muted">1 August 2019</div>
-          <p class="mb-auto">Developing an algorithm is only half of the job.</p>
-          <a href="{{ url_for('the_data_science_stack') }}" class="stretched-link">Continue Reading.</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="mastfoot mt-auto mb-2">
-    <div class="inner">
-      <p><a href="https://linkedin.com/in/keironstoddart">LinkedIn</a> | <a href="https://twitter.com/keiron_stoddart">Twitter</a></p>
-    </div>
-  </footer>
+{% block content %}
+<div class="row mb-2">
+    <p>
+        Whenever I have a question that needs to be answered or a problem that needs to be solved, the first thing I do
+        is look it up online. The purpose of this content is to uniquely contribute to that collective intelligence.
+    </p>
 </div>
-</body>
-</html>
+
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-warning">Python</strong>
+                <h3 class="mb-0">The Data Science Stack</h3>
+                <div class="mb-1 text-muted">1 August 2019</div>
+                <p class="mb-auto">Developing an algorithm is only half of the job.</p>
+                <a href="{{ url_for('the_data_science_stack') }}" class="stretched-link">Continue Reading.</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

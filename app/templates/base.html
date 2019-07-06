@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,24 +12,8 @@
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/content.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
 </head>
 <body class="text-center">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -37,15 +21,15 @@
         <div class="inner">
             <h3 class="masthead-brand">KS</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="{{ url_for('cover') }}">About</a>
-                <a class="nav-link" href="{{ url_for('content') }}">Content</a>
+                <a class="{{ 'active nav-link' if active_page == 'about' else 'nav-link' }}" href="{{ url_for('about') }}">About</a>
+                <a class="{{ 'active nav-link' if active_page == 'content' else 'nav-link' }}" href="{{ url_for('content') }}">Content</a>
             </nav>
         </div>
     </header>
 
     {% block content %}{% endblock %}
 
-    <footer class="mastfoot mt-auto">
+    <footer class="mastfoot mt-auto mb-2">
         <div class="inner">
             <p><a href="https://linkedin.com/in/keironstoddart">LinkedIn</a> | <a
                     href="https://twitter.com/keiron_stoddart">Twitter</a></p>
