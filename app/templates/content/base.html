@@ -3,14 +3,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
     {% if title %}
     <title>{{ title }} - Keiron Stoddart</title>
     {% else %}
     <title>Keiron Stoddart</title>
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <style>
         .bd-placeholder-img {
@@ -37,8 +36,8 @@
         <div class="inner">
             <h3 class="masthead-brand">KS</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="{{ url_for('cover') }}">About</a>
-                <a class="nav-link" href="{{ url_for('content') }}">Content</a>
+                <a class="{{ 'active nav-link' if active_page == 'about' else 'nav-link' }}" href="{{ url_for('about') }}">About</a>
+                <a class="{{ 'active nav-link' if active_page == 'content' else 'nav-link' }}" href="{{ url_for('content') }}">Content</a>
             </nav>
         </div>
     </header>
